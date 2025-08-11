@@ -38,35 +38,35 @@
 
 // statusのユニオン型をtypeエイリアスで定義すること
 
-const TASK_STATUSES = ["todo", "in_progress", "done"] as const
-type TaskStatus = typeof TASK_STATUSES[number]
+// const TASK_STATUSES = ["todo", "in_progress", "done"] as const
+// type TaskStatus = typeof TASK_STATUSES[number]
 
-class Task {
-  private title: string;
-  private status: TaskStatus = "todo";
-  constructor(title: string)  {
-    this.title = title;
-  };
+// class Task {
+//   private title: string;
+//   private status: TaskStatus = "todo";
+//   constructor(title: string)  {
+//     this.title = title;
+//   };
 
-  getStatus(): TaskStatus {
-    return this.status
-  }
+//   getStatus(): TaskStatus {
+//     return this.status
+//   }
 
-  getTitle(): string {
-    return this.title
-  }
+//   getTitle(): string {
+//     return this.title
+//   }
 
-  start(): void {
-    if(this.status != "todo") {
-      throw new Error("Cannot start task unless it is in 'todo' state.");
-    }
-    this.status = "in_progress";
-  }
+//   start(): void {
+//     if(this.status != "todo") {
+//       throw new Error("Cannot start task unless it is in 'todo' state.");
+//     }
+//     this.status = "in_progress";
+//   }
 
-  complete(): void {
-    if(this.status != "in_progress") {
-      throw new Error("Cannot complete task unless it is in 'in_progress' state.");
-    }
-    this.status = "done"
-  }
-}
+//   complete(): void {
+//     if(this.status != "in_progress") {
+//       throw new Error("Cannot complete task unless it is in 'in_progress' state.");
+//     }
+//     this.status = "done"
+//   }
+// }
