@@ -1,0 +1,1 @@
+npx tsc -p /Users/hokariyouhei/Documents/ts-practice/day9
